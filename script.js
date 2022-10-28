@@ -8,12 +8,17 @@ const personalMovieDB = {
   privat: false,
 };
 
-const a = prompt("Назвіть один з останніх переглянутих фільмів", "");
-const b = +prompt("На скільки балів ви його оціните?", " ");
-const c = prompt("Назвіть один з останніх переглянутих фільмів", "");
-const d = +prompt("На скільки балів ви його оціните?", " ");
+for (let i = 0; i < 2; i++) {
+  let a = prompt("Назвіть один з останніх переглянутих фільмів", "");
+  let b = +prompt("На скільки балів ви його оціните?", " ");
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+  if(a !== null && a !== '' && b !== null && b !== '' && a.length < 50) {
+    personalMovieDB.movies[a] = b;
+  } else {
+    i--;
+  }
+}
+
+
 
 // console.log(personalMovieDB);
