@@ -19,6 +19,15 @@ for (let i = 0; i < 2; i++) {
   }
 }
 
+if (personalMovieDB.count < 10) {
+  console.log("Переглянуто недостатньо фільмів");
+} else if(personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+  console.log("Ви класичний глядач");
+} else if (personalMovieDB.count >= 30) {
+  console.log("Ви кінман");
+} else {
+  console.log("Виникла помилка");
+}
 
 
 // console.log(personalMovieDB);
